@@ -56,12 +56,6 @@ The program extracts:
 - `MemTotal`: Total usable physical memory.
 - `MemAvailable`: Estimated memory available for applications without swapping.
 
-Memory utilization is calculated as:
-
-\[
-\text{RAM Usage} = \frac{\text{MemTotal}-\text{MemAvailable}}{\text{MemTotal}}\times100
-\]
-
 Using `MemAvailable` instead of `MemFree` accounts for memory that Linux can reclaim from caches and buffers.
 
 ### Disk Monitoring
@@ -73,12 +67,6 @@ shutil.disk_usage("/")
 ```
 
 The function provides the filesystem's total, used, and available space.
-
-Disk utilization is calculated as:
-
-\[
-\text{Disk Usage} = \frac{\text{Used}}{\text{Used}+\text{Free}}\times100
-\]
 
 This measures the percentage of ordinarily available filesystem space that has been consumed, following the convention used by the Linux `df` utility.
 
