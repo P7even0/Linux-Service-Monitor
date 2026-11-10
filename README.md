@@ -43,12 +43,6 @@ The program:
 4. Reads the counters again.
 5. Calculates CPU utilization using the differences between the two measurements.
 
-The calculation uses:
-
-\[
-\text{CPU Usage} = \left(1-\frac{\Delta \text{Idle Time}}{\Delta \text{Total Time}}\right)\times100
-\]
-
 For this implementation, idle time includes both the `idle` and `iowait` counters.
 
 The monitor uses the first eight numeric CPU counters, avoiding double-counting the `guest` and `guest_nice` fields.
